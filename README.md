@@ -2,7 +2,7 @@
 
 Ce corpus contient 7 romans entièrement annotés pour la tâche de repérage d'entités nommées.
 
-Roman  |  Auteur  |  Année de publication  |  Nombre de tokens
+**Roman  |  Auteur  |  Année de publication  |  Nombre de tokens**
 
 Les Trois Mousquetaires  |  Alexandre Dumas  |  1849  |  294 989
 
