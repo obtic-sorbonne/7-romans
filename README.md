@@ -1,4 +1,4 @@
-# NER-Annotated-Novels
+# Un gold standard pour la reconnaissance d'entités nommées
 
 Ce corpus contient 7 romans entièrement annotés pour la tâche de repérage d'entités nommées.
 
