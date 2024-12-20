@@ -159,7 +159,10 @@ def main(
         archive_pipeline_state_(_run, out_gold, f"{test_title}_state_gold")
 
         # pipeline run
-        tokenizer = AutoTokenizer.from_pretrained(model_id)
+        if "camembert" in model_id:
+            tokenizer = AutoTokenizer.from_pretrained("camembert-base")
+        else:
+            tokenizer = AutoTokenizer.from_pretrained(model_id)
         pipeline = Pipeline(
             [
                 BertNamedEntityRecognizer(model=model, tokenizer=tokenizer),
