@@ -1,0 +1,402 @@
+Form,Type,Mentions,Entity
+Adam,PER,1,Adam
+Adolphe,PER,14,Adolphe des Grassins
+Adolphe des Grassins,PER,1,Adolphe des Grassins
+Alcibiade,PER,1,Alcibiade
+Allemagne,LOC,1,?
+Alphonse,PER,3,Alphonse
+Amérique,LOC,1,?
+Angers,LOC,10,?
+Anjou,LOC,6,?
+Anna,PER,2,Annette
+Annette,PER,17,Annette
+Antoine Cornoiller,PER,1,Antoine Cornoiller
+au bord de la Loire,LOC,1,?
+au littoral de la Loire,LOC,1,?
+au père Grandet,PER,2,Félix Grandet
+Aubrion,LOC,2,?
+Auguste,PER,1,Auguste Lafontaine
+Auguste Lafontaine,PER,1,Auguste Lafontaine
+Austerlitz,LOC,1,?
+aux Cruchot,PER,3,Famille Cruchot
+aux des Grassins,PER,1,Famille Des Grassins
+aux Eaux de Baden,LOC,1,?
+aux États-Unis,LOC,1,?
+aux Indes,LOC,6,?
+aux rives de la Loire,LOC,1,?
+aux trois Cruchot,PER,2,Famille Cruchot
+Babylone,LOC,1,?
+Balthazar,PER,1,Balthazar
+"Ben , Ben , Ben , Bentham",PER,1,Jérémie Bentham
+Bentham,PER,2,Jerémie Bentham
+Berry,LOC,1,?
+Blois,LOC,1,?
+bon Dieu,PER,2,Dieu
+Bon Dieu,PER,1,Dieu
+Bonfons,PER,3,Bonfons Cruchot
+Boni Fontis,LOC,1,?
+Bordeaux,LOC,3,?
+Bossuet,PER,1,Jacques-Bénigne Bossuet
+Breguet,PER,1,Breguet
+Brézé,LOC,1,?
+Briton,PER,1,Briton
+Buch,LOC,1,?
+Buisson,PER,1,Monsieur Buisson
+C. de Bonfons,PER,1,Bonfons Cruchot
+Carl Sepherd,PER,1,Charles Grandet
+Catherine de Médicis,PER,1,Catherine de Médicis
+Ce Jérémie-là,PER,1,Jérémie Bentham
+Ces Anglais,MISC,1,?
+Ces deux Maries,PER,1,Marie de Nazareth
+Ces Parisiens,MISC,1,?
+Chantrey,PER,1,Francis Leggatt Chantrey
+Charles,PER,192,Charles Grandet
+Charles Grandet,PER,8,Charles Grandet
+Charles X,PER,2,Charles X de France
+Cologne,MISC,1,?
+comte d ' Aubrion,PER,1,Monsieur d'Aubrion
+Cornoiller,PER,16,Antoine Cornoiller
+Corret de Saumur,PER,1,Corret
+Cruchot,PER,35,Maitre Cruchot
+Cruchot neveu,PER,1,Bonfons Cruchot
+Cruchotine,PER,1,Mademoiselle de Gribeaucourt
+Cruchotins,PER,1,Cruchotins
+d ' Aubrion,PER,2,Monsieur d’Aubrion
+de La Bertellière,PER,1,Monsieur de la Bertellière
+demoiselle du Hautoy,PER,1,Mademoiselle du Hautoy
+des Chinois,MISC,1,?
+des Cruchot,PER,5,Famille Cruchot
+des Cruchotins,PER,3,Cruchotins
+des deux Cruchot,PER,1,Famille Cruchot
+des Eugénie,MISC,1,?
+des Grandet,PER,4,Famille Grandet
+des Grassinistes,PER,2,Grassinistes
+des Grassins,PER,27,Monsieur des Grassins
+Des Grassins,PER,6,Monsieur des Grassins
+des Indes,LOC,6,?
+des madame Grandet,MISC,1,?
+des Nanon,MISC,1,?
+des Nègres,MISC,1,?
+des Parisiens,MISC,1,?
+des Rotschild,PER,1,Famille Rotschild
+des Saumurois,MISC,1,?
+des trois Cruchot,PER,1,Famille Cruchot
+deux Cruchot,PER,1,Famille Cruchot
+Dieu,PER,31,Dieu
+du Berry,LOC,1,?
+du Cap,LOC,1,?
+du château de Froidfond,LOC,1,?
+du Christ,PER,1,Jésus Christ
+du district de Saumur,LOC,1,?
+du Grand Bureau,ORG,1,?
+du Grand-Mogol,MISC,1,?
+du Grand-Mogol,PER,1,Akbar Shah II
+du Grandet de Saumur,PER,1,Félix Grandet
+du Jupiter,PER,1,Jupiter
+du marquis de Froidfond,PER,1,Marquis de Froidfond
+du Mogol,MISC,1,?
+du Parisien,MISC,1,?
+du père Grandet,PER,7,Félix Grandet
+du président de Bonfons,PER,1,Bonfons Cruchot
+du théâtre de Madame,LOC,1,?
+dudit Juif,MISC,1,?
+E. G.,PER,1,Eugénie Grandet
+Écosse,LOC,3,?
+Espagne,LOC,1,?
+État,ORG,1,?
+Eugénie,PER,340,Eugénie Grandet
+Eugénie Grandet,PER,5,Eugénie Grandet
+Europe,LOC,2,?
+famille des Atrides,PER,1,Famille Atrides
+Faublas,MISC,2,?
+Félix Grandet de Saumur,PER,1,Félix Grandet
+Fessard,PER,1,Monsieur Fessard
+Florence,LOC,1,?
+Florine,PER,1,Florine
+France,LOC,6,?
+François Keller,PER,1,François Keller
+Froidfond,LOC,14,?
+Gênes,LOC,1,?
+Goethe,PER,1,Johann Wolfgang von Goethe
+Grand ' rue de Saumur,LOC,1,?
+grande Nanon,PER,1,Nanon Cornoiller
+Grandet,PER,222,Félix Grandet
+Grandet de Paris,PER,1,Victor-Ange-Guillaume Grandet
+Grandet de Saumur,PER,6,Félix Grandet
+Guillaume,PER,1,Victor-Ange-Guillaume Grandet
+Guillaume Grandet,PER,5,Victor-Ange-Guillaume Grandet
+Henri II,PER,1,Henri II de France
+Henri IV,PER,1,Henri IV de France
+Hercule,PER,1,Hercule
+Hollande,LOC,3,?
+Indes,LOC,1,?
+Issoudun,LOC,1,?
+Java,LOC,1,?
+"Jé , Jé , Jé , Jérémie Ben",PER,1,Jerémie Bentham
+Jean,PER,2,Jean
+Jean V,PER,1,Jean V du Portugal
+Jérémie Bentham,PER,1,Jerémie Bentham
+Juif,MISC,2,?
+l ' abbaye de Noyers,LOC,2,?
+l ' abbé Cruchot,PER,9,Abbé Cruchot
+L ' abbé Cruchot,PER,2,Abbé Cruchot
+l ' Anjou,LOC,3,?
+l ' arrondissement de Saumur,LOC,1,?
+l ' Église,ORG,2,?
+l ' Empire,ORG,3,?
+l ' État,ORG,2,?
+L ' hôtel d ' Aubrion,LOC,1,?
+l ' hôtel d ' Aubrion,LOC,3,?
+l ' Opéra,LOC,2,?
+la Banque de France,ORG,1,?
+La Bertellière,PER,1,Monsieur de la Bertellière
+la Bourse,LOC,1,?
+la Bretagne,LOC,1,?
+la Chambre,ORG,1,?
+la Chambre des Députés,ORG,1,?
+la Chaptal,MISC,2,?
+la côte d ' Afrique,LOC,1,?
+la Cour,ORG,1,?
+la Cour royale d ' Angers,ORG,1,?
+la duchesse de Chaulieu,PER,1,Duchesse de Chaulieu
+la famille Cruchot,PER,1,Famille Cruchot
+la famille d ' Aubrion,PER,1,Famille Aubrion
+la famille des Grassins,PER,2,Famille Des Grassins
+la famille Grandet,PER,1,Famille Grandet
+La Fontaine,PER,1,Jean de La Fontaine
+la France,LOC,4,?
+La grande Nanon,PER,4,Nanon Cornoiller
+la grande Nanon,PER,12,Nanon Cornoiller
+la Grande Nanon,PER,5,Nanon Cornoiller
+La Grande Nanon,PER,2,Nanon Cornoiller
+la Jeannette,MISC,1,?
+la Lande,MISC,1,?
+la Légion-d ' Honneur,ORG,2,?
+la Ligne,ORG,1,?
+la Loire,LOC,7,?
+la maison d ' Aubrion de Buch,PER,1,Famille d’Aubrion
+la maison des Grassins,LOC,1,?
+la maison Grandet,LOC,1,?
+la maison Grandet,PER,4,Famille Grandet
+la maison Grandet de Paris,PER,2,Famille Grandet
+la maison Guillaume Grandet,PER,3,Famille Grandet
+la Marguerite,PER,1,Marguerite de Goethe
+la marquise d ' Aubrion,PER,1,Madame d’Aubrion
+la Nanon,PER,3,Nanon Cornoiller
+la Pairie,ORG,1,?
+la Parisienne,MISC,1,?
+la Pologne,LOC,1,?
+la République française,ORG,1,?
+La terre de Froidfond,LOC,1,?
+la Touraine,LOC,1,?
+la Vierge,MISC,1,?
+la Vierge,PER,2,Marie de Nazareth
+la Vierge Marie,PER,1,Marie de Nazareth
+la Vierge mère,PER,1,Marie de Nazareth
+La ville de Saumur,LOC,1,?
+la ville de Saumur,LOC,4,?
+le Belge,MISC,1,?
+le bonhomme Grandet,PER,1,Félix Grandet
+le chemin de Froidfond,LOC,1,?
+le Christ,PER,1,Jésus Christ
+le comte d ' Aubrion,PER,1,Monsieur d’Aubrion
+le Consulat,ORG,1,?
+le Cruchot,PER,1,Bonfons Cruchot
+le Dieu,PER,1,Dieu
+le domaine de Bonfons,LOC,1,?
+le faubourg Saint-Germain,LOC,1,?
+le gars Cornoiller,PER,1,Antoine Cornoiller
+le Grandet de Paris,PER,1,Victor-Ange-Guillaume Grandet
+le Hollandais,MISC,1,?
+le jeune Grandet,PER,1,Charles Grandet
+le Juif,MISC,3,?
+le littoral de la Loire,LOC,1,?
+le marquis d ' Aubrion,PER,1,Monsieur d’Aubrion
+le marquisat de Froidfond,LOC,1,?
+le notaire Cruchot,PER,1,Bonfons Cruchot
+Le pape Clément VII,PER,1,Pape Clément VII
+le Parisien,MISC,1,?
+Le Parisien,PER,3,Victor-Ange-Guillaume Grandet
+le Parisien,PER,1,Victor-Ange-Guillaume Grandet
+le père Grandet,PER,21,Félix Grandet
+Le père Grandet,PER,11,Félix Grandet
+le président Cruchot,PER,2,Bonfons Cruchot
+le président de Bonfons,PER,6,Bonfons Cruchot
+le président G. de Bonfons,PER,1,Bonfons Cruchot
+le Saumurois,PER,1,Félix Grandet
+le sieur des Grassins,PER,1,Monsieur des Grassins
+le Talleyrand,PER,1,Charles Maurice de Talleyrand-Périgord
+les Almées,MISC,1,?
+les Belges,MISC,2,?
+les Blanches,MISC,1,?
+les côtes d ' Afrique,LOC,1,?
+les Cruchot,PER,14,Famille Cruchot
+Les Cruchot,PER,2,Famille Cruchot
+les Cruchotins,PER,5,Cruchotins
+Les Cruchotins,PER,1,Cruchotins
+les des Grassins,PER,5,Famille Des Grassins
+Les des Grassins,PER,4,Famille Des Grassins
+les deux Cruchot,PER,3,Famille Cruchot
+les Dreux,PER,1,Famille Dreux
+les du Hautoy,PER,1,Famille du Hautoy
+"les Farry , Breilman et Cie",ORG,1,?
+les Finden,PER,1,Famille Finden
+les Froidfond,PER,1,Famille Froidfond
+les Grandes-Indes,MISC,1,?
+les Grandet,PER,4,Famille Grandet
+les Grassinistes,PER,4,Grassinistes
+Les Hollandais,MISC,1,?
+les Indes,LOC,5,?
+les Javanaises,MISC,1,?
+les La Bertellière,PER,2,Famille La Bertellière
+les Médicis,PER,2,Famille Médicis
+les Mulâtresses,MISC,1,?
+les Négresses,MISC,1,?
+les Parisiens,MISC,2,?
+Les Parisiens,MISC,1,?
+Les quatre Saumurois,PER,1,Les quatres Saumurois
+les Saints,MISC,1,?
+les Saumurois,MISC,1,?
+les trois Cruchot,PER,2,Famille Cruchot
+Les trois Cruchot,PER,1,Famille Cruchot
+les trois des Grassins,PER,2,Famille Des Grassins
+les trois Mages,PER,1,Les trois Mages
+Lisbonne,LOC,1,?
+Loire,LOC,1,?
+lord Byron,PER,1,George Gordon Byron
+m ' ame Grandet,PER,1,Madame Félix Grandet
+madame Campan,PER,1,Madame Campan
+Madame Cornoiller,PER,1,Nanon Cornoiller
+madame Cornoiller,PER,5,Nanon Cornoiller
+madame d ' Aubrion,PER,4,Madame d'Aubrion
+madame d ' Orsonval,PER,2,Madame d'Orsonval
+madame de Bonfons,PER,1,Eugénie Grandet
+Madame de Bonfons,PER,2,Eugénie Grandet
+madame de La Gaudinière,PER,1,Madame de La Gaudinière
+madame de Mirbel,PER,1,Madame de Mirbel
+Madame des Grassins,PER,9,Lucienne des Grassins
+madame des Grassins,PER,34,Lucienne des Grassins
+madame Dorsonval,PER,1,Madame Dorsonval
+madame et mademoiselle Grandet,PER,3,Madame Félix Grandet et Eugénie Grandet
+Madame et mademoiselle Grandet,PER,1,Madame Félix Grandet et Eugénie Grandet
+madame Gentillet,PER,3,Madame Gentilet
+madame Grandet,PER,75,Madame Félix Grandet
+Madame Grandet,PER,29,Madame Félix Grandet
+madame la marquise d ' Aubrion,PER,1,Madame d'Aubrion
+madame la présidente de Bonfons,PER,1,Eugénie Grandet
+Mademoiselle d ' Aubrion,PER,1,Mathilde d'Aubrion
+mademoiselle d ' Aubrion,PER,5,Mathilde d'Aubrion
+mademoiselle de Froidfond,PER,2,Eugénie Grandet
+mademoiselle de Gribeaucourt,PER,3,Mademoiselle de Gribeaucourt
+mademoiselle Eugénie,PER,4,Eugénie Grandet
+mademoiselle Eugénie Grandet de Saumur,PER,1,Eugénie Grandet
+Mademoiselle Grandet,PER,2,Eugénie Grandet
+mademoiselle Grandet,PER,18,Eugénie Grandet
+mademoiselle Mathilde,PER,1,Mathilde d'Aubrion
+mademoiselle Nanon,PER,1,Nanon Cornoiller
+maître Cruchot,PER,14,Maitre Cruchot
+Maître Cruchot,PER,4,Maitre Cruchot
+Marat,PER,2,Jean-Paul Marat
+Marie,PER,1,Marie de Nazareth
+marquis d ' Aubrion,PER,1,Monsieur d’Aubrion
+marquis de Froidfond,PER,1,Marquis de Froidfond
+marquisat de Froidfond,LOC,1,?
+"messieurs Farry , Breilman et Cie",ORG,1,?
+Milo,PER,1,Milo
+mon cousin Grandet,PER,1,Charles Grandet
+Mon Dieu,PER,7,Dieu
+mon Dieu,PER,3,Dieu
+monsieur Adolphe des Grassins,PER,1,Adolphe des Grassins
+monsieur Bergerin,PER,4,Monsieur Bergerin
+Monsieur Bergerin,PER,1,Monsieur Bergerin
+monsieur Buisson,PER,1,Monsieur Buisson
+monsieur C. de Bonfons,PER,2,Bonfons Cruchot
+Monsieur Charles,PER,1,Charles Grandet
+Monsieur Charles Grandet,PER,1,Charles Grandet
+monsieur Cruchot,PER,11,Maitre Cruchot
+monsieur Cruchot de Bonfons,PER,1,Bonfons Cruchot
+monsieur d ' Aubrion,PER,3,Monsieur d’Aubrion
+"monsieur de Bon , Bon , Bon , fons",PER,1,Bonfons Cruchot
+Monsieur de Bon ... Bon ... Bonfons,PER,1,Bonfons Cruchot
+monsieur de Bonfons,PER,8,Bonfons Cruchot
+monsieur de Froidfond,PER,1,Marquis de Froidfond
+monsieur de La Bertellière,PER,3,Monsieur de la Bertellière
+monsieur de Nucingen,PER,1,Baron de Nucingen
+monsieur des Grassins,PER,18,Monsieur des Grassins
+Monsieur des Grassins,PER,6,Monsieur des Grassins
+monsieur des Lupeaulx,PER,1,Monsieur des Lupeaulx
+monsieur et à madame Grandet,PER,1,Monsieur et Madame Félix Grandet
+monsieur et madame Cornoiller,PER,1,Antoine et Nanon Cornoiller
+Monsieur et madame d ' Aubrion,PER,1,Monsieur et Madame d’Aubrion
+monsieur et madame de Larsonnière,PER,1,Monsieur et Madame de Larsonnière
+monsieur et madame des Grassins,PER,1,Monsieur et Madame des Grassins
+Monsieur et madame Guillaume Grandet,PER,1,Monsieur et Madame Victor-Ange-Guillaume Grandet
+monsieur Fessard,PER,1,Monsieur Fessard
+monsieur Grandet,PER,42,Félix Grandet
+Monsieur Grandet,PER,14,Félix Grandet
+monsieur Grandet de Paris,PER,6,Victor-Ange-Guillaume Grandet
+Monsieur Grandet de Saumur,PER,1,Félix Grandet
+monsieur Grandet junior,PER,1,Victor-Ange-Guillaume Grandet
+monsieur La Bertellière,PER,3,Monsieur de la Bertellière
+monsieur Laffitte,PER,1,Jacques Laffitte
+monsieur le baron de Nucingen,PER,1,Baron de Nucingen
+monsieur le marquis de Froidfond,PER,1,Marquis de Froidfond
+monsieur le président Cruchot,PER,1,Bonfons Cruchot
+Monsieur le président de Bonfons,PER,1,Bonfons Cruchot
+monsieur le président de Bonfons,PER,2,Bonfons Cruchot
+monsieur le vicomte d ' Aubrion,PER,1,Charles Grandet
+Nanon,PER,187,Nanon Cornoiller
+Nantes,LOC,11,?
+Napoléon,PER,3,Napoléon Bonaparte
+nos Cruchot,PER,1,Famille Cruchot
+nos Hollandais,MISC,1,?
+Notre Belge,MISC,1,?
+Noyers,LOC,2,?
+Orléans,LOC,2,?
+papa Grandet,PER,1,Félix Grandet
+Paris,LOC,67,?
+Parisien,MISC,1,?
+Parisien,PER,1,Victor-Ange-Guillaume Grandet
+Pazzi,PER,1,Famille Pazzi de Florence
+Pénélope,PER,1,Pénélope
+père Grandet,PER,1,Félix Grandet
+Perrottet,PER,1,Monsieur Perrottet
+Phidias,PER,1,Phidias
+Philippe V,PER,1,Philippe V d’Espagne
+Poitou,LOC,1,?
+Raphaël,PER,1,Raffaello Sanzio
+Roguin,PER,2,Monsieur Roguin
+rue Hillerin-Bertin,LOC,1,?
+Russie,LOC,1,?
+S. M. le roi Charles X,PER,1,Charles X de France
+Sa Majesté,PER,1,Charles X de France
+sa Parisienne,MISC,1,?
+Saint-Martin de Tours,LOC,1,?
+Saint-Thomas,LOC,2,?
+Sainte Vierge,PER,4,Marie de Nazareth
+Sainte-Vierge,PER,2,Marie de Nazareth
+Sanchez,PER,1,Tomás Sánchez
+"Sau , au , aumur",LOC,1,?
+Saumur,LOC,78,?
+Sepherd,PER,1,Charles Grandet
+Sèvres,MISC,2,?
+Souchet,PER,1,Monsieur Souchet
+Touraine,LOC,2,?
+Tours,LOC,3,?
+un Anglais,MISC,1,?
+un Cruchot,PER,1,Famille Cruchot
+un Européen,MISC,2,?
+un Israélite,MISC,1,?
+Un Parisien,MISC,1,?
+un Parisien,MISC,1,?
+une Anna,PER,1,Annette
+une La Bertellière,MISC,1,?
+une La Bertellière,PER,1,Famille La Bertellière
+une Madeleine,PER,1,une Madeleine
+une Parisienne,MISC,2,?
+Vénus,MISC,2,?
+Vénus,PER,1,Vénus
+vicomte d ' Aubrion,PER,1,Charles Grandet
+Victor-Ange-Guillaume Grandet,PER,1,Victor-Ange-Guillaume Grandet
+Vierge,PER,2,Marie de Nazareth
+Westall,PER,1,Richard Westall
