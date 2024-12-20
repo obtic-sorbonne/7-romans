@@ -63,7 +63,10 @@ def train_ner_model(
     # BERT tokenizer splits tokens into subtokens. The
     # tokenize_and_align_labels function correctly aligns labels and
     # subtokens.
-    tokenizer = AutoTokenizer.from_pretrained(hg_id)
+    if "camembert" in hg_id:
+        tokenizer = AutoTokenizer.from_pretrained("camembert-base")
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(hg_id)
     train = train.map(
         ft.partial(_tokenize_and_align_labels, tokenizer=tokenizer), batched=True
     )
