@@ -87,6 +87,7 @@ smmap==5.0.1
 sympy==1.12.1
 threadpoolctl==3.5.0
 tibert==0.4.0
+tiktoken==0.7.0
 tokenizers==0.20.3
 tomli==2.1.0
 torch==2.4.1
