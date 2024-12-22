@@ -7661,7 +7661,7 @@ son O
 père O
 Henri B-PER
 IV I-PER
-. I-PER
+. O
 Le O
 père O
 de O
@@ -8104,7 +8104,7 @@ Meré I-PER
 , O
 un B-PER
 Vitry I-PER
-. I-PER
+. O
 Enfin O
 , O
 à O
@@ -17846,7 +17846,8 @@ son O
 coup O
 ! O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 , O
 furieux O
@@ -21712,7 +21713,8 @@ un O
 mousquetaire O
 . O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 ne O
 connaissait O
@@ -27844,7 +27846,7 @@ d O
 ' O
 Henri B-PER
 IV I-PER
-Louis-le-Juste I-PER
+Louis-le-Juste B-PER
 ... O
 
 - O
@@ -60260,7 +60262,7 @@ son O
 guide O
 . O
 
-adame B-PER
+Madame B-PER
 Bonacieux I-PER
 et O
 le O
@@ -90593,7 +90595,8 @@ reine I-PER
 protégez-moi O
 ! O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 se O
 rendit O
@@ -107311,7 +107314,8 @@ réellement O
 amoureux O
 . O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 revint O
 chez O
@@ -125868,7 +125872,8 @@ de O
 main O
 . O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 n O
 ' O
@@ -142455,7 +142460,8 @@ meilleurs O
 ! O
 ... O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 était O
 resté O
@@ -152677,7 +152683,8 @@ ma O
 vie O
 ! O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 avait O
 suivi O
@@ -181498,7 +181505,8 @@ sa O
 chambre O
 . O
 
-' B-PER
+D B-PER
+' I-PER
 Artagnan I-PER
 était O
 tellement O
@@ -189705,7 +189713,7 @@ le B-PER
 cardinal I-PER
 . O
 
-ichelieu B-PER
+Richelieu B-PER
 appuya O
 son O
 coude O
@@ -223165,7 +223173,7 @@ la O
 reine O
 . O
 
-thos B-PER
+Athos B-PER
 avait O
 trouvé O
 le O
@@ -244797,7 +244805,7 @@ prochaine O
 fête O
 . O
 
-ilady B-PER
+Milady B-PER
 rêvait O
 qu O
 ' O
@@ -248023,7 +248031,7 @@ si O
 belle O
 ! O
 
-elton B-PER
+Felton B-PER
 était O
 venu O
 ; O
@@ -255845,7 +255853,7 @@ me O
 venger O
 ! O
 
-ilady B-PER
+Milady B-PER
 en O
 était O
 arrivée O
@@ -269563,7 +269571,7 @@ de I-LOC
 Béthune I-LOC
 . O
 
-elton B-PER
+Felton B-PER
 prit O
 congé O
 de O
@@ -274224,7 +274232,7 @@ jusqu O
 à O
 retenir O
 en O
-Angleterre B-PER
+Angleterre B-LOC
 l O
 ' O
 ambassadeur O
@@ -293721,7 +293729,7 @@ Artagnan I-PER
 ; O
 aurait-elle O
 quitté O
-Armentières B-PER
+Armentières B-LOC
 ? O
 
 Grimaud B-PER

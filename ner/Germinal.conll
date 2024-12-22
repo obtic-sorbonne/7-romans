@@ -144,7 +144,7 @@ homme O
 était O
 parti O
 de O
-Marchiennes B-PER
+Marchiennes B-LOC
 vers O
 deux O
 heures O
@@ -283,7 +283,7 @@ gauche O
 deux O
 kilomètres O
 de O
-Montsou B-PER
+Montsou B-LOC
 , O
 il O
 aperçut O
@@ -10868,7 +10868,7 @@ culotte O
 . O
 Elle O
 habitait O
-Réquillart B-PER
+Réquillart B-LOC
 avec O
 son O
 père O
@@ -11046,7 +11046,7 @@ vous O
 ai O
 aperçus O
 derrière O
-Réquillart B-PER
+Réquillart B-LOC
 . O
 À O
 preuve O
@@ -137788,7 +137788,7 @@ en O
 deux O
 minutes O
 , O
-Jean-Bart B-PER
+Jean-Bart B-LOC
 se O
 vida O
 . O

@@ -30747,7 +30747,7 @@ pieusement O
 , O
 salve O
 , O
-maris B-PER
+maris O
 stella O
 ! O
 
@@ -55706,7 +55706,7 @@ Paris I-LOC
 de O
 Henri B-PER
 IV I-PER
-, I-PER
+, O
 à O
 la B-LOC
 place I-LOC
@@ -72541,7 +72541,7 @@ le O
 symbole O
 du B-PER
 Semeur I-PER
-, I-PER
+, O
 et O
 celui O
 des O
@@ -88365,7 +88365,7 @@ venus O
 de O
 Mésopotamie B-LOC
 à O
-Paris B-PER
+Paris B-LOC
 sous O
 le O
 dernier O
@@ -89092,7 +89092,7 @@ soyez O
 bien O
 de O
 votre O
-Paris B-PER
+Paris B-LOC
 pour O
 ne O
 pas O
@@ -104111,10 +104111,10 @@ appelle O
 aujourd O
 ' O
 hui O
-Porte B-PER
-d I-PER
-' I-PER
-Enfer I-PER
+Porte B-LOC
+d I-LOC
+' I-LOC
+Enfer I-LOC
 . O
 
 Mademoiselle B-PER
@@ -104151,11 +104151,11 @@ ses O
 dents O
 : O
 - O
-Porte B-PER
-Gibard I-PER
+Porte B-LOC
+Gibard I-LOC
 ! O
-Porte B-PER
-Gibard I-PER
+Porte B-LOC
+Gibard I-LOC
 ! O
 C O
 ' O
@@ -108077,7 +108077,7 @@ une O
 pensée O
 . O
 Tout O
-Paris B-PER
+Paris B-LOC
 était O
 sous O
 ses O
@@ -120289,7 +120289,7 @@ sait O
 la O
 mathématique O
 comme O
-Picatrix B-PER
+Picatrix B-MISC
 , O
 et O
 qui O
@@ -176707,7 +176707,7 @@ oriental O
 Mathias B-PER
 Hungadi I-PER
 Spicali I-PER
-, I-PER
+, O
 duc B-PER
 d I-PER
 ' I-PER

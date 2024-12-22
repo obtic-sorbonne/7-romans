@@ -7587,7 +7587,7 @@ et O
 le O
 Mémorial O
 de O
-Sainte-Hélène B-PER
+Sainte-Hélène B-LOC
 , O
 complétaient O
 son O
@@ -40127,7 +40127,7 @@ et O
 de O
 Louis B-PER
 XV I-PER
-. I-PER
+. O
 À O
 son O
 inexprimable O
@@ -101816,7 +101816,7 @@ Saint-Giraud B-PER
 Vous O
 connaissez O
 donc O
-Verrières B-PER
+Verrières B-LOC
 , O
 jeune O
 homme O
@@ -113326,7 +113326,7 @@ imputant O
 à O
 péché O
 . O
-Bilieux B-PER
+Bilieux O
 , O
 janséniste O
 , O
@@ -123109,7 +123109,7 @@ classe O
 - O
 M. B-PER
 Sorel I-PER
-, I-PER
+, O
 venez-vous O
 ce O
 soir O
@@ -129218,8 +129218,8 @@ reparties O
 piquantes O
 de O
 Mathilde B-PER
-. I-PER
-M. I-PER
+. O
+M. B-PER
 de I-PER
 Fervaques I-PER
 se O
@@ -147185,7 +147185,7 @@ devint O
 presque O
 amoureux O
 . O
-Pallida B-PER
+Pallida O
 morte O
 futura O
 , O
