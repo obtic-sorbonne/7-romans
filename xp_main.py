@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import List, Dict, Optional
+from typing import List, Dict, Literal, Optional
 import os
 import functools as ft
 from statistics import mean
@@ -25,6 +25,7 @@ from renard.pipeline.core import Pipeline
 from renard.pipeline.ner import BertNamedEntityRecognizer
 from renard.pipeline.character_unification import GraphRulesCharacterUnifier
 from renard.pipeline.graph_extraction import CoOccurrencesGraphExtractor
+from data import NER_ID2LABEL, NovelTitle, load_novel
 
 from utils import archive_pipeline_state_
 from measures import (
@@ -78,8 +79,8 @@ def train_ner_model(
     model = AutoModelForTokenClassification.from_pretrained(
         hg_id,
         num_labels=len(label_lst),
-        id2label={i: label for i, label in enumerate(label_lst)},
-        label2id={label: i for i, label in enumerate(label_lst)},
+        id2label=NER_ID2LABEL,
+        label2id={v: k for k, v in NER_ID2LABEL.items()},
     )
 
     trainer = SacredTrainer(
@@ -99,7 +100,6 @@ def train_ner_model(
 @ex.config
 def config():
     model_id: str
-    paths: List[str]
     output_dir: Optional[str] = None
     # see https://huggingface.co/docs/transformers/v4.33.0/en/main_classes/trainer#transformers.TrainingArguments
     hg_training_kwargs: Dict
@@ -111,25 +111,25 @@ def config():
 def main(
     _run: Run,
     model_id: str,
-    paths: List[str],
     output_dir: Optional[str],
     hg_training_kwargs: Dict,
     co_occurrences_dist: int,
 ):
     print_config(_run)
 
-    # [(novel title, dataset) ...]
-    datasets = [
-        (
-            os.path.splitext(os.path.basename(path))[0],
-            hgdataset_from_conll2002(path, separator=" "),
-        )
-        for path in paths
+    novels: List[Literal[NovelTitle]] = [
+        "BelAmi",
+        "EugénieGrandet",
+        "Germinal",
+        "LeRougeEtLeNoir",
+        "LesTroisMousquetaires",
+        "NotreDameDeParis",
     ]
+    # [(novel title, (ner_dataset, characters)) ...]
+    datasets = [(name, load_novel(name)) for name in novels]
 
     gold_pipeline = Pipeline(
         [
-            GraphRulesCharacterUnifier(),
             CoOccurrencesGraphExtractor(
                 co_occurrences_dist=(co_occurrences_dist, "tokens")
             ),
@@ -140,21 +140,25 @@ def main(
     recall_lst = []
     f1_lst = []
 
-    for test_title, test in datasets:
+    for test_title, dataset in datasets:
+        ner_test, gold_characters = dataset
         print(f"testing on {test_title}")
-        train = [dataset for title, dataset in datasets if title != test_title]
-        train = concatenate_datasets(train)
+        ner_train = [dataset[0] for title, dataset in datasets if title != test_title]
+        ner_train = concatenate_datasets(ner_train)
 
         # train NER model
         targs = TrainingArguments(**hg_training_kwargs)
-        model = train_ner_model(_run, model_id, train, test, targs)
+        model = train_ner_model(_run, model_id, ner_train, ner_test, targs)
 
         # gold pipeline run
-        tokens = list(flatten(test["tokens"]))
-        gold_tags = [model.config.id2label[l] for l in flatten(test["labels"])]
+        tokens = list(flatten(ner_test["tokens"]))
+        gold_tags = [NER_ID2LABEL[l] for l in flatten(ner_test["labels"])]
         gold_entities = ner_entities(tokens, gold_tags)
         out_gold = gold_pipeline(
-            tokens=tokens, sentences=test["tokens"], entities=gold_entities
+            tokens=tokens,
+            sentences=ner_test["tokens"],
+            entities=gold_entities,
+            characters=gold_characters,
         )
         archive_pipeline_state_(_run, out_gold, f"{test_title}_state_gold")
 
@@ -175,10 +179,12 @@ def main(
             lang="fra",
         )
 
-        out = pipeline(tokens=tokens, sentences=test["tokens"])
+        out = pipeline(tokens=tokens, sentences=ner_test["tokens"])
         archive_pipeline_state_(_run, out, f"{test_title}_state")
 
         # Network extraction scoring
+        assert not out.characters is None
+        assert not out_gold.characters is None
         vertex_precision, vertex_recall, vertex_f1 = score_character_unification(
             [character.names for character in out_gold.characters],
             [character.names for character in out.characters],
@@ -203,6 +209,8 @@ def main(
         _run.log_scalar(f"{test_title}.WeightedEdgeF1", w_edge_f1)
 
         # NER scoring
+        assert not out.entities is None
+        assert not out_gold.entities is None
         precision, recall, f1 = score_ner(
             tokens, out.entities, out_gold.entities, ignore_classes=None
         )

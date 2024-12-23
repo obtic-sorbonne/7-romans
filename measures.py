@@ -1,5 +1,5 @@
 import math
-from typing import List, Literal, Tuple, Dict, Optional, Set, cast
+from typing import FrozenSet, List, Literal, Tuple, Dict, Optional, Set, cast
 from renard.pipeline.character_unification import Character
 import numpy as np
 import networkx as nx
@@ -120,7 +120,7 @@ def score_network_extraction_edges(
 
 
 def score_character_unification(
-    refs: List[Set[str]], preds: List[Set[str]]
+    refs: List[FrozenSet[str]], preds: List[FrozenSet[str]]
 ) -> Tuple[float, float, float]:
     """Score the character unification task.
 

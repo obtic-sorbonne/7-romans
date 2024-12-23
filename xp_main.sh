@@ -2,7 +2,6 @@
 
 python xp_main.py -F './runs' with\
        model_id="camembert-base"\
-       paths='["./NotreDameDeParis.conll", "./BelAmi.conll", "EugénieGrandet.conll", "Germinal.conll", "LeRougeEtLeNoir.conll", "LesTroisMousquetaires.conll", "MadameBovary.conll"]'\
        output_dir="./models"\
        hg_training_kwargs.output_dir="./checkpoints"\
        hg_training_kwargs.overwrite_output_dir=True\
