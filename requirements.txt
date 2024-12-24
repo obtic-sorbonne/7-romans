@@ -75,7 +75,7 @@ pytz==2024.2
 pyyaml==6.0.2
 rank-bm25==0.2.2
 regex==2024.11.6
-renard-pipeline @ git+https://github.com/CompNet/Renard@a7d39578d2e1f7e30c253331152c3eee7efe732e
+renard-pipeline @ git+https://github.com/CompNet/Renard@8fdda1391a73db6e6027d993ddff572a1c65ced3
 requests==2.32.3
 rich==13.9.4
 sacred==0.8.6
