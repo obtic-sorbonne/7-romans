@@ -114,4 +114,4 @@ def main(
     model = train_ner_model(_run, model_id, train, train, targs)
 
     if not output_dir is None:
-        model.save_pretrained(f"{model_id}-literary-NER")
+        model.save_pretrained(f"{output_dir}/{model_id}-literary-NER")
