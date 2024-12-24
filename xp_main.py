@@ -123,6 +123,7 @@ def main(
         "Germinal",
         "LeRougeEtLeNoir",
         "LesTroisMousquetaires",
+        "MadameBovary",
         "NotreDameDeParis",
     ]
     # [(novel title, (ner_dataset, characters)) ...]

@@ -13,6 +13,7 @@ NovelTitle = Literal[
     "Germinal",
     "LeRougeEtLeNoir",
     "LesTroisMousquetaires",
+    "MadameBovary",
     "NotreDameDeParis",
 ]
 
