@@ -50,6 +50,8 @@ def load_novel(novel_name: NovelTitle) -> Tuple[Dataset, List[Character]]:
     alias_df = pd.read_csv(f"./alias-resolution/{novel_name}.csv")
     char_dict = defaultdict(set)
     for _, row in alias_df.iterrows():
+        if row["Entity"] == "?":
+            continue
         char_dict[row["Entity"]].add(row["Form"])
     characters = []
     for names in char_dict.values():
