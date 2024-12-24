@@ -171,7 +171,7 @@ def main(
         pipeline = Pipeline(
             [
                 BertNamedEntityRecognizer(model=model, tokenizer=tokenizer),
-                GraphRulesCharacterUnifier(),
+                GraphRulesCharacterUnifier(ignore_leading_determiner=True),
                 CoOccurrencesGraphExtractor(
                     co_occurrences_dist=(co_occurrences_dist, "tokens")
                 ),
