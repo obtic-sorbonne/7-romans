@@ -19,7 +19,7 @@ requires-dist = [
     { name = "accelerate", specifier = ">=0.26.0" },
     { name = "protobuf", specifier = ">=5.29.2" },
     { name = "pydantic", specifier = ">=2.9.2" },
-    { name = "renard-pipeline", git = "https://github.com/CompNet/Renard?rev=8fdda1391a73db6e6027d993ddff572a1c65ced3" },
+    { name = "renard-pipeline", git = "https://github.com/CompNet/Renard?rev=b3e1722eb53831bda2e277c73e584168eddf3bbc" },
     { name = "setuptools", specifier = ">=75.3.0" },
     { name = "tiktoken", specifier = ">=0.7.0" },
 ]
@@ -1071,7 +1071,7 @@ wheels = [
 [[package]]
 name = "renard-pipeline"
 version = "0.5.0"
-source = { git = "https://github.com/CompNet/Renard?rev=8fdda1391a73db6e6027d993ddff572a1c65ced3#8fdda1391a73db6e6027d993ddff572a1c65ced3" }
+source = { git = "https://github.com/CompNet/Renard?rev=b3e1722eb53831bda2e277c73e584168eddf3bbc#b3e1722eb53831bda2e277c73e584168eddf3bbc" }
 dependencies = [
     { name = "datasets" },
     { name = "grimbert" },

@@ -37,7 +37,13 @@ def load_novel(novel_name: NovelTitle) -> Tuple[Dataset, List[Character]]:
 
     :return: (NER Huggingface Dataset, list of characters)
     """
-    ner_dataset = hgdataset_from_conll2002(f"./ner/{novel_name}.conll", separator=" ")
+    # HACK: we split paragraphs so that they fit into 512
+    # tokens. Experimentally, we noted that the original text was 0.77
+    # smaller than the wordpiece-tokenized text. hence, we cut
+    # paragraphs in chunks of 370 tokens (a bit less than 0.77 * 512)
+    ner_dataset = hgdataset_from_conll2002(
+        f"./ner/{novel_name}.conll", separator=" ", max_sent_len=370
+    )
     per_entities = [
         e
         for e in ner_entities(

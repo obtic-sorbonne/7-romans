@@ -14,4 +14,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-renard-pipeline = { git = "https://github.com/CompNet/Renard", rev = "8fdda1391a73db6e6027d993ddff572a1c65ced3" }
+renard-pipeline = { git = "https://github.com/CompNet/Renard", rev = "b3e1722eb53831bda2e277c73e584168eddf3bbc" }
