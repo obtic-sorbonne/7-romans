@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-python xp_main.py -F './runs' with\
+python xp_train.py -F './runs' with\
        model_id="camembert-base"\
        output_dir="./models"\
        hg_training_kwargs.output_dir="./checkpoints"\
