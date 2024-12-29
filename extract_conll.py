@@ -285,6 +285,7 @@ print(df)
 
 # %% Agreement matrices
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 from more_itertools import flatten
@@ -321,7 +322,7 @@ def amatshow(
         M[x][y] = f1 if metric == "F1" else kappa
         M[y][x] = f1 if metric == "F1" else kappa
 
-    ax.matshow(M, vmin=0, vmax=1)
+    ax.matshow(M, vmin=0, vmax=1, cmap=matplotlib.cm.gray)
     for (i, j), value in np.ndenumerate(M):
         ax.text(
             j,
@@ -333,9 +334,11 @@ def amatshow(
         )
     ax.set_xticks(list(range(len(sannotators))))
     ax.set_yticks(list(range(len(sannotators))))
-    annotator_names = [find_annotator_name(a, conll_annotations) for a in sannotators]
+    annotator_names = [f"annotateur {i+1}" for i in range(len(sannotators))]
     ax.set_xticklabels(annotator_names, rotation=45, fontsize=fontsize)
     ax.set_yticklabels(annotator_names, fontsize=fontsize)
+    if ner_class == "all":
+        ner_class = "Général"
     ax.set_title(f"{ner_class}", fontsize=fontsize)
     print("done!")
 
