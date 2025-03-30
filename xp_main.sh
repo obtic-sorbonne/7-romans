@@ -12,4 +12,5 @@ python xp_main.py -F './runs' with\
        hg_training_kwargs.save_total_limit=3\
        hg_training_kwargs.eval_accumulation_steps=32\
        hg_training_kwargs.learning_rate=1e-5\
+       use_weights=True\
        co_occurrences_dist=32

@@ -3,6 +3,7 @@ from typing import List, Dict, Literal, Optional
 import os
 import functools as ft
 from statistics import mean
+import torch
 from sacred import Experiment
 from sacred.commands import print_config
 from sacred.run import Run
@@ -15,6 +16,7 @@ from transformers import (
     AutoModelForTokenClassification,
     TrainingArguments,
     DataCollatorForTokenClassification,
+    EarlyStoppingCallback,
 )
 from renard.ner_utils import (
     hgdataset_from_conll2002,
@@ -25,7 +27,7 @@ from renard.pipeline.core import Pipeline
 from renard.pipeline.ner import BertNamedEntityRecognizer
 from renard.pipeline.character_unification import GraphRulesCharacterUnifier
 from renard.pipeline.graph_extraction import CoOccurrencesGraphExtractor
-from data import NER_ID2LABEL, NovelTitle, load_novel
+from data import NER_ID2LABEL, NovelTitle, instances_nb, load_novel
 
 from utils import archive_pipeline_state_
 from measures import (
@@ -37,9 +39,10 @@ from measures import (
 
 
 class SacredTrainer(Trainer):
-    def __init__(self, _run: Run, **kwargs):
+    def __init__(self, _run: Run, weights: Optional[List[float]], **kwargs):
         super().__init__(**kwargs)
         self._run = _run
+        self.weights = weights
 
     def evaluate(self, **kwargs) -> Dict[str, float]:
         metrics = super().evaluate(**kwargs)
@@ -54,12 +57,31 @@ class SacredTrainer(Trainer):
         if "learning_rate" in logs:
             self._run.log_scalar("learning_rate", logs["learning_rate"])
 
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        labels = inputs.pop("labels")
+        outputs = model(**inputs)
+        logits = outputs.get("logits")
+        if self.weights is None:
+            loss_fct = torch.nn.CrossEntropyLoss()
+        else:
+            loss_fct = torch.nn.CrossEntropyLoss(
+                weight=torch.tensor(self.weights, device=model.device)
+            )
+        loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
+        return (loss, outputs) if return_outputs else loss
+
 
 ex = Experiment("train")
 
 
 def train_ner_model(
-    _run: Run, hg_id: str, train: Dataset, test: Dataset, targs: TrainingArguments
+    _run: Run,
+    hg_id: str,
+    train: Dataset,
+    valid: Dataset,
+    test: Dataset,
+    use_weights: bool,
+    targs: TrainingArguments,
 ) -> PreTrainedModel:
     # BERT tokenizer splits tokens into subtokens. The
     # tokenize_and_align_labels function correctly aligns labels and
@@ -83,14 +105,26 @@ def train_ner_model(
         label2id={v: k for k, v in NER_ID2LABEL.items()},
     )
 
+    weights = None
+    if use_weights:
+        instances_nb_list = [instances_nb(train, label) for label in label_lst]
+        max_instances_nb = max(instances_nb_list)
+        weights = [max_instances_nb / nb for nb in instances_nb_list]
+
+    # required with early stopping
+    targs.load_best_model_at_end = True
+    targs.metric_for_best_model = "loss"
+
     trainer = SacredTrainer(
         _run,
+        weights=weights,
         model=model,
         args=targs,
         train_dataset=train,
-        eval_dataset=train,
+        eval_dataset=valid,
         data_collator=DataCollatorForTokenClassification(tokenizer),
         processing_class=tokenizer,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
     )
     trainer.train()
 
@@ -101,8 +135,14 @@ def train_ner_model(
 def config():
     model_id: str
     output_dir: Optional[str] = None
-    # see https://huggingface.co/docs/transformers/v4.33.0/en/main_classes/trainer#transformers.TrainingArguments
+    # see
+    # https://huggingface.co/docs/transformers/v4.33.0/en/main_classes/trainer#transformers.TrainingArguments
+    # note that 'load_best_model_at_end' and 'metric_for_best_model'
+    # will always be overriden to support early stopping
     hg_training_kwargs: Dict
+    # whether to use class weights. If true, each class is weighted by
+    # max(instances_nb) / instances_nb
+    use_weights: bool
     # in tokens
     co_occurrences_dist: int
 
@@ -113,6 +153,7 @@ def main(
     model_id: str,
     output_dir: Optional[str],
     hg_training_kwargs: Dict,
+    use_weights: bool,
     co_occurrences_dist: int,
 ):
     print_config(_run)
@@ -144,12 +185,19 @@ def main(
     for test_title, dataset in datasets:
         ner_test, gold_characters = dataset
         print(f"testing on {test_title}")
-        ner_train = [dataset[0] for title, dataset in datasets if title != test_title]
+        remaining_dataset = [
+            dataset[0] for title, dataset in datasets if title != test_title
+        ]
+        ner_valid = min(remaining_dataset, key=len)
+        remaining_dataset.remove(ner_valid)
+        ner_train = remaining_dataset
         ner_train = concatenate_datasets(ner_train)
 
         # train NER model
         targs = TrainingArguments(**hg_training_kwargs)
-        model = train_ner_model(_run, model_id, ner_train, ner_test, targs)
+        model = train_ner_model(
+            _run, model_id, ner_train, ner_valid, ner_test, use_weights, targs
+        )
 
         # gold pipeline run
         tokens = list(flatten(ner_test["tokens"]))

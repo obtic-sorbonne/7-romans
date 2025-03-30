@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Literal, Tuple, List
+from typing import Literal, Tuple, List, Dict
 import pandas as pd
 from datasets import Dataset
 from more_itertools import flatten
@@ -17,7 +17,11 @@ NovelTitle = Literal[
     "NotreDameDeParis",
 ]
 
-NER_ID2LABEL = {
+NERLabel = Literal[
+    "B-LOC", "B-MISC", "B-ORG", "B-PER", "I-LOC", "I-MISC", "I-ORG", "I-PER", "O"
+]
+
+NER_ID2LABEL: Dict[int, NERLabel] = {
     0: "B-LOC",
     1: "B-MISC",
     2: "B-ORG",
@@ -28,6 +32,16 @@ NER_ID2LABEL = {
     7: "I-PER",
     8: "O",
 }
+
+
+def instances_nb(ner_dataset: Dataset, ner_label: NERLabel) -> int:
+    nb = 0
+    for labels in ner_dataset["labels"]:
+        for label in labels:
+            # NOTE: we use 'get' to account for -100 padding labels
+            if NER_ID2LABEL.get(label) == ner_label:
+                nb += 1
+    return nb
 
 
 def load_novel(novel_name: NovelTitle) -> Tuple[Dataset, List[Character]]:
