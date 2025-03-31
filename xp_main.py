@@ -50,7 +50,7 @@ class SacredTrainer(Trainer):
             self._run.log_scalar(k, v)
         return metrics
 
-    def log(self, logs: Dict[str, float], **kwargs):
+    def log(self, logs: Dict[str, float], *args, **kwargs):
         super().log(logs)
         if "loss" in logs:
             self._run.log_scalar("loss", logs["loss"])
