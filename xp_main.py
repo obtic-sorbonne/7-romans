@@ -93,6 +93,9 @@ def train_ner_model(
     train = train.map(
         ft.partial(_tokenize_and_align_labels, tokenizer=tokenizer), batched=True
     )
+    valid = valid.map(
+        ft.partial(_tokenize_and_align_labels, tokenizer=tokenizer), batched=True
+    )
     test = test.map(
         ft.partial(_tokenize_and_align_labels, tokenizer=tokenizer), batched=True
     )
@@ -185,12 +188,11 @@ def main(
     for test_title, dataset in datasets:
         ner_test, gold_characters = dataset
         print(f"testing on {test_title}")
-        remaining_dataset = [
+        ner_train = [
             dataset[0] for title, dataset in datasets if title != test_title
         ]
-        ner_valid = min(remaining_dataset, key=len)
-        remaining_dataset.remove(ner_valid)
-        ner_train = remaining_dataset
+        ner_valid = min(ner_train, key=len)
+        ner_train.remove(ner_valid)
         ner_train = concatenate_datasets(ner_train)
 
         # train NER model
