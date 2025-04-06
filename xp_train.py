@@ -14,7 +14,7 @@ from transformers import (
     DataCollatorForTokenClassification,
 )
 from renard.ner_utils import hgdataset_from_conll2002, _tokenize_and_align_labels
-from data import NER_ID2LABEL, NovelTitle
+from data import NER_ID2LABEL, NovelTitle, instances_nb
 
 
 class SacredTrainer(Trainer):
@@ -28,7 +28,7 @@ class SacredTrainer(Trainer):
             self._run.log_scalar(k, v)
         return metrics
 
-    def log(self, logs: Dict[str, float]):
+    def log(self, logs: Dict[str, float], *args, **kwargs):
         super().log(logs)
         if "loss" in logs:
             self._run.log_scalar("loss", logs["loss"])
@@ -84,6 +84,10 @@ def config():
     output_dir: Optional[str] = None
     # see https://huggingface.co/docs/transformers/v4.33.0/en/main_classes/trainer#transformers.TrainingArguments
     hg_training_kwargs: Dict
+    # whether to use class weights. If true, each class is weighted by
+    # max(instances_nb) / instances_nb
+    use_weights: bool
+
 
 
 @ex.automain
@@ -92,6 +96,7 @@ def main(
     model_id: str,
     output_dir: Optional[str],
     hg_training_kwargs: Dict,
+    use_weights: bool,
 ):
     print_config(_run)
 
@@ -110,6 +115,14 @@ def main(
         for name in novels
     ]
     train = concatenate_datasets(datasets)
+
+    label_lst = train.features["labels"].feature.names
+    weights = None
+    if use_weights:
+        instances_nb_list = [instances_nb(train, label) for label in label_lst]
+        max_instances_nb = max(instances_nb_list)
+        weights = [max_instances_nb / nb for nb in instances_nb_list]
+
     targs = TrainingArguments(**hg_training_kwargs)
     model = train_ner_model(_run, model_id, train, train, targs)
 
