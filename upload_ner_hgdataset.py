@@ -25,4 +25,4 @@ info = DatasetInfo(
     license="mit",
 )
 dataset = concatenate_datasets(dataset, info=info)
-dataset.push_to_hub("compnet-renard/7-romans")
+dataset.push_to_hub("compnet-renard/7-romans-ner")
