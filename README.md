@@ -37,10 +37,10 @@ Le script `xp_train.sh` permet d'entraîner le modèle sur les 7 romans (utilis�
 Si vous utilisez le corpus dans vos recherches, vous pouvez citer :
 
 ```bibtex
-@InProceedings{
+@InProceedings{Maurel2025,
   authors = {Maurel, P. and Amalvy, A. and Labatut, V. and Alrahabi, M.},
   title = {Du repérage à l’analyse : un modèle pour la reconnaissance d’entités nommées dans les textes littéraires en français},
-  booktitle = {Digital Humanities 2025 (to appear)},
+  booktitle = {Digital Humanities 2025},
   year = {2025},
 }
 ```
