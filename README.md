@@ -17,6 +17,14 @@ Ce gold standard a été réalisé dans le cadre d'un projet à ObTIC-Sorbonne u
 
 Le corpus a été ensuite utilisé pour entrainer un nouveau modèle NER, en collaboration avec Arthur Amalvy et Vincent Labatut (université d'Avignon).
 
+Le jeu de données est disponible :
+
+- Dans ce repository :
+  - Dossier `ner` sous format CoNLL-2002 pour la REN
+  - Dossier `alias-resolution` sous format csv pour la résolution d'alias
+- Sur HuggingFace :
+  - [compnet-renard/7-romans-ner](https://huggingface.co/datasets/compnet-renard/7-romans-ner)
+  - [compnet-renard/7-romans-alias-resolution](https://huggingface.co/datasets/compnet-renard/7-romans-alias-resolution)
 
 
 # Modèle et reproduction des résultats
